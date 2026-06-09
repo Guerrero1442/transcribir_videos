@@ -1,1 +1,4 @@
 **/env
+.venv/
+transcription.log
+*.docx
