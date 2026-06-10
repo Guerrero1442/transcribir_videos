@@ -61,8 +61,7 @@ class VideoTranscriber:
     def save_transcription(self, segments: List[str], input_file: Path, output_format: str, with_timestamps: bool):
         """Guarda la transcripción en el formato especificado."""
         base_name = input_file.stem
-        suffix = "con_timestamps" if with_timestamps else "sin_timestamps"
-        output_file = input_file.parent / f"transcripcion_{base_name}_{suffix}.{output_format}"
+        output_file = input_file.parent / f"{base_name}.{output_format}"
         
         logger.info(f"Guardando transcripción en formato {output_format}: {output_file}")
         

@@ -39,7 +39,7 @@ def test_save_transcription_txt(mock_load_model, tmp_path):
     
     transcriber.save_transcription(segmentos, video_file, "txt", with_timestamps=False)
     
-    output_file = tmp_path / "transcripcion_mi_video_sin_timestamps.txt"
+    output_file = tmp_path / "mi_video.txt"
     assert output_file.exists()
     
     content = output_file.read_text(encoding="utf-8")
